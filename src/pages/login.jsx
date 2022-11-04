@@ -1,16 +1,26 @@
 import React from 'react';
 import { useState } from 'react';
-export const Login=()=>{
+import { Registration } from './registration';
+export const Login=(props)=>{
 
-    
+    const [email ,setEmail]=useState('');
+    const[password, setPassword]=useState('');
+
+    const handleSubmit=(e)=>{
+        e.preventDefault();
+        console.log(email);
+    }
     
     return(
-        <form>
-            <label for="email">Email</label>
-            <input type="email" placeholder='abc@gamil.com' id="email" name="email" required/>
-            <label for="password">Password</label>
-            <input type="password" placeholder='********' id="password" name="password" required/>
-            <button>Log In</button>
+        <div className='auth-form-container'>
+        <form  className="login-form "onSubmit={handleSubmit}>
+            <label htmlFor="email">Email</label>
+            <input value={email} onChange ={(e)=> setEmail(e.target.value)}  type="email" placeholder='abc@gamil.com' id="email" name="email" required/>
+            <label htmlFor="password">Password</label>
+            <input  value={password }onChange ={(e)=> setPassword(e.target.value)} type="password" placeholder='********' id="password" name="password" required/>
+            <button className ="button" type="submit">Log In</button>
         </form>
+        <button className='link-button' type='link' onClick={()=>props.onFormSwitch('registration')} > If Don't have Account?Registre here</button>
+        </div>
     )
 } 

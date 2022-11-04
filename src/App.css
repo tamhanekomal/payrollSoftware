@@ -1,38 +1,87 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  min-height: 100vh;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+}
+.auth-form-container,.login-form,.registration-form{
+  display: flex;
+  flex-direction: column;
+    align-items: center;
+    height: 270px;
+    width: 350px;
+    margin-bottom: 170px;
+     box-shadow: 0 0 8px 0 rgba(8, 8, 8, 0.2), 0 0 20px 0 rgba(13, 13, 13, 0.19);
+   
+}
+.registration-form{
+  display:flex;
+  flex-direction: column;
+    align-items: center;
+    height: 570px;
+    width: 350px;
+    margin-bottom: 170px;
+     box-shadow: 0 0 8px 0 rgba(8, 8, 8, 0.2), 0 0 20px 0 rgba(13, 13, 13, 0.19);
+   
+}
+.text_area{
+  align-content: center;
+  border-radius: 22px;
+  margin-bottom: 35px;
+  width: 100%;
+  height: 64px;
+  color: #020a0c;
+  box-shadow: 0 0 8px 0 rgba(8, 8, 8, 0.2), 0 0 20px 0 rgba(13, 13, 13, 0.19);
 }
 
-.App-link {
-  color: #61dafb;
+body{
+  background: linear-gradient(135deg, #01fabc, #65c2e4);
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  
+  
+}
+label{
+  font-family:'Montserrat light' bold;
+  text-align: left;
+  padding: 0.25rem 0;
+  font-size: 18px;
+  border-radius: 30px;
+
+}
+input{
+  margin: 0.5rem 0;
+  padding: 1rem;
+  border: none;
+  font-family:'Montserrat light'bold;
+  border-radius: 3px;
+
+}
+.button{
+  margin-top: 28px;
+    width: 140px;
+    height: 60px;
+    border-radius: 30px;
+    background:linear-gradient( #04b7df, #06f9dd);
+    border: none;
+    font-family: 'Montserrat'bold;
+    font-size: 20px;
+    color: #FFFFFF;
+    box-shadow: 0 4px 8px 0 rgba(181, 141, 237, 0.7), 0 6px 20px 0 rgba(181, 141, 237, 0.9);
+    cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.link-button{
+  padding: 7px;
+  color: #691ad8;
+  font-family: 'Montserrat light 'bold;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+  
+  text-decoration: none;
+
 }
